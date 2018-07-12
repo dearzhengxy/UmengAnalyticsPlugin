@@ -1,0 +1,29 @@
+{
+  "name": "UmengAnalyticsPlugin",
+  "version": "1.0.1",
+  "description": "a umeng analytics plugin",
+  "cordova": {
+    "id": "cordova-plugin-jb-umenganalytics",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XiaoyuZheng666/UmengAnalyticsPlugin.git"
+  },
+  "keywords": [
+    "umenganalytics,cordova,ios,android"
+  ],
+  "author": "xiaoyuzheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XiaoyuZheng666/UmengAnalyticsPlugin/issues"
+  },
+  "homepage": "https://github.com/XiaoyuZheng666/UmengAnalyticsPlugin/blob/master/README.md"
+}
