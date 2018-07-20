@@ -20,6 +20,9 @@
   "keywords": [
     "umenganalytics,cordova,ios,android"
   ],
+  "dependencies": {
+    "xml2js": "^0.4"
+  },
   "author": "xiaoyuzheng",
   "license": "MIT",
   "bugs": {

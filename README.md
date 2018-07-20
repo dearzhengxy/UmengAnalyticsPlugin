@@ -1,4 +1,4 @@
-# cordova-plugin-jb-umenganalytics- a umeng analytics plugin
+# cordova-plugin-jb-umenganalytics- 快速集成友盟统计的插件
 
 ##Requirements
 
@@ -6,7 +6,7 @@
 
 ##Installation
 
-    cordova plugin add cordova-plugin-jb-umenganalytics
+    cordova plugin add cordova-plugin-jb-umenganalytics  --variable UMENGKEY=这里填写友盟key
     
 
 
