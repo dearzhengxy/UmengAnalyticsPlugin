@@ -30,7 +30,10 @@ exports.umengConfig = {
 
   androidCode:'loadUrl(launchUrl);\n PGCommonSDK.setLogEnabled(true); \n PGCommonSDK.init(this,'+'"' +umengkey+'"'+',"Umeng",UMConfigure.DEVICE_TYPE_PHONE,"");\n MobclickAgent.setSessionContinueMillis(1000);\n MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_DUM_NORMAL);' ,
   androidMethod:'CordovaActivity\n{\n @Override \n public void onResume() { \n super.onResume(); \n MobclickAgent.onResume(this);} \n\n @Override \n protected void onPause() { \n super.onPause(); \n MobclickAgent.onPause(this);} ' ,
+  androidImport:'import com.umeng.analytics.MobclickAgent; \n import com.umeng.commonsdk.UMConfigure; \n import com.umeng.plugin.PGCommonSDK;' ,
+
   androidCodePart1:'PGCommonSDK.setLogEnabled\\(true\\);' ,
+
 
   iosCode:'[[MainViewController alloc] init]; \n [UMConfigure setLogEnabled:YES];\n [UMCommonModule initWithAppkey:@'+'"'+umengkey+'"'+'channel:@"Umeng"]; \n [MobClick setScenarioType:E_UM_NORMAL];' ,
   iosImport:'#import "AppDelegate.h" \n #import "UMCommonModule.h" \n #import <UMCommon/UMCommon.h> \n #import <UMAnalytics/MobClick.h>' ,

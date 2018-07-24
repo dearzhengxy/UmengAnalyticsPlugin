@@ -34,6 +34,9 @@ function replaceStringInFile(fileAbsolutePath, platform) {
         //之前没有添加过，就去添加
         replace_string_in_file(fileAbsolutePath, "loadUrl\\(launchUrl\\);", umengConfig['androidCode']);
         replace_string_in_file(fileAbsolutePath, /CordovaActivity\s*\{/gi, umengConfig['androidMethod']);
+
+        replace_string_in_file(fileAbsolutePath, /package\s*com.goldrock.xyd;/gi, "package com.goldrock.xyd;\n"+umengConfig['androidImport']);
+
       }
     }
   } else {
