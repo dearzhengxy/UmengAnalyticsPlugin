@@ -1,9 +1,6 @@
-cordova.define("Umeng.Analytics", function(require, exports, module) {
-/*
- * Javascript interface of Cordova plugin for Umeng Analytics SDK
- */
 
-    var MobclickAgent = {
+
+var MobclickAgent = {
 
     /**
      * 自定义事件数量统计
@@ -11,10 +8,10 @@ cordova.define("Umeng.Analytics", function(require, exports, module) {
      * @param eventId
      *            String类型.事件ID，注意需要先在友盟网站注册此ID
      */
-	onEvent : function(eventId) {
-		cordova.exec(null, null, "AnalyticsSDK","onEvent", [ eventId ]);
+    onEvent : function(eventId) {
+        cordova.exec(null, null, "AnalyticsSDK","onEvent", [ eventId ]);
 
-	},
+    },
     /**
      * 自定义事件数量统计
      *
@@ -23,10 +20,10 @@ cordova.define("Umeng.Analytics", function(require, exports, module) {
      * @param eventLabel
      *            String类型.事件标签，事件的一个属性说明
      */
-	onEventWithLabel : function(eventId, eventLabel) {
-		cordova.exec(null, null, "AnalyticsSDK","onEventWithLabel", [ eventId, eventLabel ]);
+    onEventWithLabel : function(eventId, eventLabel) {
+        cordova.exec(null, null, "AnalyticsSDK","onEventWithLabel", [ eventId, eventLabel ]);
 
-	},
+    },
     /**
      * 自定义事件数量统计
      *
@@ -35,10 +32,10 @@ cordova.define("Umeng.Analytics", function(require, exports, module) {
      * @param eventData
      *            Dictionary类型.当前事件的属性集合，最多支持10个K-V值
      */
-	onEventWithParameters : function(eventId, eventData) {
-		cordova.exec(null, null, "AnalyticsSDK","onEventWithParameters", [ eventId, eventData ]);
+    onEventWithParameters : function(eventId, eventData) {
+        cordova.exec(null, null, "AnalyticsSDK","onEventWithParameters", [ eventId, eventData ]);
 
-	},
+    },
     /**
      * 自定义事件数值型统计
      *
@@ -50,34 +47,34 @@ cordova.define("Umeng.Analytics", function(require, exports, module) {
      *            int 类型.事件持续时长，单位毫秒，您需要手动计算并传入时长，作为事件的时长参数
      *
      */
-	onEventWithCounter : function(eventId, eventData, eventNum) {
-		cordova.exec(null, null, "AnalyticsSDK","onEventWithCounter", [ eventId, eventData, eventNum ]);
+    onEventWithCounter : function(eventId, eventData, eventNum) {
+        cordova.exec(null, null, "AnalyticsSDK","onEventWithCounter", [ eventId, eventData, eventNum ]);
 
-	},
+    },
     /**
      * 页面统计开始时调用
      *
      * @param pageName
      *            String类型.页面名称
      */
-	onPageBegin : function(pageName) {
-		cordova.exec(null, null, "AnalyticsSDK","onPageBegin", [ pageName ]);
+    onPageBegin : function(pageName) {
+        cordova.exec(null, null, "AnalyticsSDK","onPageBegin", [ pageName ]);
 
-	},
+    },
     /**
      * 页面统计结束时调用
      *
      * @param pageName
      *            String类型.页面名称
      */
-	onPageEnd : function(pageName) {
-		cordova.exec(null, null, "AnalyticsSDK","onPageEnd", [ pageName ]);
+    onPageEnd : function(pageName) {
+        cordova.exec(null, null, "AnalyticsSDK","onPageEnd", [ pageName ]);
 
-	},
+    },
     /**
      * 获取IOS UUID
      */
-	getDeviceId:function(callBack) {
+    getDeviceId:function(callBack) {
         cordova.exec(callBack, null, "AnalyticsSDK", "getDeviceId", []);
 
     },
@@ -86,7 +83,7 @@ cordova.define("Umeng.Analytics", function(require, exports, module) {
      * @param enabled
      *           Bool类型
      */
-	setLogEnabled:function(enabled) {
+    setLogEnabled:function(enabled) {
         cordova.exec(null, null, "AnalyticsSDK", "setLogEnabled", [enabled]);
     },
     /**
@@ -341,10 +338,9 @@ cordova.define("Umeng.Analytics", function(require, exports, module) {
          */
          setFirstLaunchEvent : function(eventList) {
                cordova.exec(null, null, "AnalyticsSDK","setFirstLaunchEvent", [eventList]);
-         },
+         }
+};
 
-       };
+     module.exports =MobclickAgent;
 
-               module.exports =MobclickAgent;
 
-});

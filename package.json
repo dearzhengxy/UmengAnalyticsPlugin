@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-jb-umenganalytics",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a umeng analytics plugin",
   "cordova": {
     "id": "cordova-plugin-jb-umenganalytics",
