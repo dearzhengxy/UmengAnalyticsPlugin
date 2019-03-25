@@ -19,7 +19,7 @@
 
 @end
 
-@implementation UMAnalyticsModule
+@implementation AnalyticsSDK
 
 #if __has_feature(objc_arc)
 #else
